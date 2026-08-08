@@ -24,30 +24,34 @@ _____
 
 ## Growth loop
 
-*A link or image of the loop that compounds (acquisition → activation → retention → referral).*
+*A link or image of the loop that compounds (acquisition → activation → retention → revenue → renewed acquisition).*
 
 ```mermaid
 flowchart LR
-    A["Trigger<br/>A small-business owner searches for financial guidance"]
+    A["Trigger<br/>A small-business owner searches for help with a financial task"]
     B["1 · Discover<br/>Find a FinWise article, template, or calculator"]
-    C["2 · Engage<br/>Use the content to understand a financial task"]
-    D["3 · Start trial<br/>Apply the guidance using FinWise"]
-    E["4 · Experience value<br/>Complete a key financial-management action"]
-    F["5 · Generate signals<br/>Usage and questions reveal new content topics"]
-    G["Outcome<br/>FinWise publishes and distributes more relevant content"]
+    C["2 · Activate<br/>Start a trial and complete a key financial task"]
+    D["3 · Retain<br/>Return for recurring financial workflows"]
+    E["4 · Convert<br/>Upgrade to a paid plan after experiencing sustained value"]
+    F["5 · Generate signals<br/>Search, usage, and support data reveal new topics"]
+    G["Outcome<br/>FinWise publishes more relevant, targeted content"]
 
     A --> B --> C --> D --> E --> F --> G
-    G -->|"Restarts the loop with a larger audience"| A
+    G -->|"Attracts more qualified visitors and restarts the loop"| A
 ```
 
-**Trigger**: A small-business owner discovers a FinWise article, financial template, or calculator while searching for help with a financial-management task.
+**Trigger**: A small-business owner searches for help with a financial-management task and discovers a FinWise article, template, or calculator.
 
-**Stage 1**: The visitor uses the content and is prompted to start a FinWise trial to apply the guidance to their own business.
+**Stage 1 — Discover**: The visitor uses the content to understand the task and sees how FinWise can help apply the guidance to their business.
 
-**Stage 2**: The user enters or imports business data and experiences value by completing a key financial-management action.
+**Stage 2 — Activate**: The visitor starts a trial, enters or imports business data, and completes a key financial-management action.
 
-**Stage 3**: User activity and recurring questions reveal additional high-interest topics that FinWise turns into useful, searchable content.
+**Stage 3 — Retain**: The user returns to FinWise for recurring financial workflows and experiences sustained value.
 
-**Outcome**: The new content attracts more qualified small-business visitors, generating additional trial sign-ups and restarting the loop with a larger audience.
+**Stage 4 — Convert**: The retained user upgrades to a paid plan.
+
+**Stage 5 — Generate signals**: Aggregated search, product-usage, and support data reveal additional high-interest topics that FinWise can address through useful, searchable content.
+
+**Outcome**: FinWise publishes more relevant content, attracting additional qualified small-business visitors and restarting the loop with a larger audience.
 
 _____
