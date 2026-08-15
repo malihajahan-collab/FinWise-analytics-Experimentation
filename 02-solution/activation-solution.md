@@ -7,6 +7,7 @@
 *The exact moment FinWise becomes "my money, finally clear."*
 
 FinWise's candidate Aha moment is when a trial user **reviews a recommended cash-flow action generated from their own business data**.
+<img width="1251" height="908" alt="Prototype" src="https://github.com/user-attachments/assets/07852cc8-c0e8-4d63-aedc-80b056d0087c" />
 
 In the prototype, this happens when the user clicks **“Review the $5,240”** after FinWise shows that Maple Street Bakery's projected cash balance may fall below its operating buffer within six weeks. The measurable behavioral event is:
 
