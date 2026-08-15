@@ -29,7 +29,7 @@ _____
 
 ## Wireframe
 
-*A link or image of the mechanic in context.*
+<img width="1536" height="1024" alt="finwise-weekly-cash-clarity" src="https://github.com/user-attachments/assets/a0ca3a14-8e53-418f-92d2-dc0a82a32dbe" />
 
 ![FinWise Weekly Cash Clarity Check showing the in-progress and completed states](assets/finwise-weekly-cash-clarity.png)
 
