@@ -1,69 +1,103 @@
 # The Solution · FinWise
 
-> Module 2 · Acquisition & Activation. The onboarding solution and the Aha moment that makes value land.
+Module 2 · Acquisition & Activation. The onboarding solution and the Aha moment that makes value land.
 
-## Aha moment
+## Recrafted exercise: onboarding in service of the Module 1 bet
 
-*The exact moment FinWise becomes "my money, finally clear."*
+Module 1 established that FinWise will first test the **Revenue** stage: increasing trial-to-paid conversion from the 1.99% baseline with a contextual paid-plan continuation prompt. The onboarding flow exists to get a new trial user to the qualifying value event before that prompt is shown.
+## Strategy context
 
-FinWise's candidate Aha moment is when a trial user **reviews a recommended cash-flow action generated from their own business data**.
+### The aligned activation chain
+FinWise is a financial-management SaaS product for small businesses with a product-led reverse-trial model. Module 1 identified the **Revenue** stage—trial to paid—as the first experiment priority: only **128 of 6,424 trials converted** in the 13-month dataset, a **1.99% trial-to-paid conversion rate**.
 
-In the prototype, this happens when the user clicks **“Review the $5,240”** after FinWise shows that Maple Street Bakery's projected cash balance may fall below its operating buffer within six weeks. The measurable behavioral event is:
+```mermaid
+flowchart LR
+    A["Content intent, if known<br/>Cash-flow template or guide"] --> B["Connect primary account"]
+    B --> C["FinWise creates a first financial model"]
+    C --> D["Aha: review a personal cash-flow action"]
+    D --> E["Treatment: contextual paid-plan prompt"]
+    E --> F["Paid conversion"]
+```
+The Module 1 hypothesis is that showing eligible trial users a contextual paid-plan continuation prompt will improve trial-to-paid conversion from **1.99% to 2.4%**. Eligibility must follow a demonstrated product-value event, not happen during early setup. Module 2 therefore designs the shortest path from sign-up to that event.
 
-`personalized_cashflow_action_reviewed`
+### Candidate Aha moment
 
-This is stronger than treating account connection or dashboard viewing as the Aha moment. The user has connected real data, received a forecast tied to an actual business concern, and chosen to investigate a recommended action.
+**A trial user reviews a recommended cash-flow action from a first financial model generated using their connected business account.**
 
-This behavior plausibly predicts retention because it completes FinWise's core value sequence:
+This deliberately combines the two Module 1 qualifying behaviors:
+> **A trial user reviews a recommended cash-flow action from a first financial model generated using their connected business account.**
 
-**Connect real data → receive a relevant forecast → investigate an actionable recommendation**
+1. the user imports or connects real account data; and
+2. the user completes the first financial-modeling action by reviewing the resulting recommended action.
+This is the first point at which FinWise transforms account data into a clear answer to a practical small-business question—whether cash will remain above a preferred buffer—and suggests a concrete action. Connecting an account is setup; reviewing the modeled recommendation is the candidate value moment.
 
-Users who repeat this workflow have a reason to return as their transactions, balances, and upcoming obligations change. This remains a hypothesis until cohort data demonstrates that users who complete this action retain and convert at higher rates than those who do not.
+**Activation event:** `personalized_cashflow_action_reviewed`
+**Candidate activation event:** `personalized_cashflow_action_reviewed`
 
-_____
+The event is a candidate Aha moment—not a proven predictor. FinWise should validate that users who complete it convert and retain at higher rates than comparable trial users who do not.
+This is a testable candidate, not a proven causal event. FinWise should later compare conversion and retention for users who complete it with comparable users who do not.
 
-## Onboarding prototype
+---
 
-<img width="1251" height="908" alt="Prototype" src="https://github.com/user-attachments/assets/07852cc8-c0e8-4d63-aedc-80b056d0087c" />
+## Minimum treatment path: four screens
+## Onboarding plan
 
-[Open the clickable FinWise onboarding prototype](https://finwise-onboarding-p-nm88.bolt.host)
+The flow begins after sign-up and is intentionally designed as the **treatment** for the Module 1 experiment. The contextual paid-plan prompt appears only after Aha, never before it.
+The onboarding path contains **three steps to Aha**. The paid-plan prompt is a distinct post-Aha treatment in the Module 1 Revenue experiment, not a prerequisite for activation.
 
-The prototype uses a five-screen path:
+| Screen | Single job | One action requested | Module 1 connection |
+| --- | --- | --- | --- |
+| **1. Confirm first goal** | Set the first valuable question to answer. | **Confirm “See my upcoming cash flow.”** | Pre-fill from a cash-flow template, guide, or campaign when acquisition intent is known. |
+| **2. Connect primary account** | Obtain the minimum real data needed for a personal forecast. | **Connect account.** | Satisfies the data-import condition. |
+| **3. Personal cash-flow action** | Show the first model and let the user inspect one recommended action. | **Review recommended action.** | Completion records `personalized_cashflow_action_reviewed`: the Aha / qualifying event. |
+| **4. Continue with FinWise** | Present the contextual paid-plan continuation prompt after demonstrated value. | **Continue to paid plan.** | This is the Module 1 treatment. The control experience omits this prompt at this point. |
+| Stage | Single job | One user action | Personalization / friction removal | Event or output |
+| --- | --- | --- | --- | --- |
+| **1. Confirm first goal** | Establish the first financial question FinWise will answer. | Confirm **“See my upcoming cash flow.”** | For users arriving from a cash-flow template, guide, or campaign, pre-fill this goal; when confidence is high, skip the screen entirely. Users with unknown intent see one goal question, not a multi-question quiz. | First goal confirmed. |
+| **2. Connect primary account** | Get the minimum real data needed for the first model. | Select **“Connect account.”** | Ask for one primary business account only. Do not ask for manual categorization, additional accounts, company-profile details, or team invitations. | Account connected / data imported. |
+| **3. Review personal cash-flow action** | Turn the connected account data into a forecast and concrete recommended action. | Select **“Review recommended action.”** | The screen uses the connected account and the chosen goal to make the first result personal and focused. | `personalized_cashflow_action_reviewed` — candidate Aha event. |
+| **Post-Aha treatment** | Offer continued paid access only after the user has seen value. | Select **“Continue to paid plan.”** | Include **“Not now — continue my trial”** as a clear secondary choice. No discounts, pressure, or complex pricing comparison. | Module 1 treatment; trial-to-paid conversion. |
 
-1. **Content landing page** — demonstrates value for the visitor's cash-flow question. The single action is **“Apply this to my business.”**
-2. **Lightweight sign-up** — creates the reverse trial with minimal interruption. The single action is **“Continue with Google.”**
-3. **Confirm the pre-filled goal** — carries the visitor's content intent into the product. The single action is **“Use this goal.”**
-4. **Connect one account** — obtains the minimum real data required for the forecast. The single action is **“Connect RBC Business Chequing.”**
-5. **Personalized insight** — answers the original question and presents a recommended action. The single action is **“Review the $5,240.”**
+### Personalization rules
 
-The path is deliberately narrow:
+- **Known acquisition intent:** If a user starts from cash-flow content, pre-fill the goal and, where confidence is high, skip Screen 1 entirely. The shortest path is then **account connection → Aha → treatment prompt**.
+- **No known intent:** Ask one goal-selection question only. Do not use a multi-question personalization quiz.
+- **Real data:** Create the first model from the primary connected account. Do not request manual categorization, additional accounts, company profiles, or team invitations before Aha.
 
-**High-intent content → contextual trial CTA → minimal sign-up → pre-filled goal → one data connection → personalized action**
+### Deliberately excluded before Aha
 
-_____
+- Product tour and feature menus
+- Additional account connections
+- Team invitations
+- Manual transaction categorization
+- Billing collection or pricing comparison before Screen 4
+- Notifications, settings, and unrelated preferences
+- Notification preferences and settings
+- Billing, pricing comparison, or upgrade prompts before the post-Aha treatment
 
-## Why this activates
+---
 
-*The activation logic: what changes, and why it converts trial users.*
+## Prototype mapping
+<img width="1432" height="838" alt="FinWise 1" src="https://github.com/user-attachments/assets/8070f436-07af-4110-8f2c-826d0bb9d885" />
+<img width="1427" height="817" alt="FinWise 2" src="https://github.com/user-attachments/assets/23fdfb13-5fc9-4c47-be69-f5dbd3ba6605" />
+<img width="1430" height="827" alt="FinWise 3" src="https://github.com/user-attachments/assets/744e05cd-6228-4487-877f-c8781e7d2c34" />
+<img width="1012" height="902" alt="FinWise 4" src="https://github.com/user-attachments/assets/672a71b3-9a78-4a0f-9780-992d866fb66d" />
+<img width="1163" height="902" alt="FinWise 5" src="https://github.com/user-attachments/assets/7e638d9c-694f-4f4e-a3e1-bfd93bf2d3ef" /> 
 
-### Final hypothesis
+https://finwise-onboarding-p-7fon.bolt.host
 
-If FinWise carries a visitor's content intent into a short, pre-personalized trial experience, then more qualified visitors will start trials and reach activation because the transition from financial guidance to applying that guidance will feel relevant and continuous.
+## Experiment specification
 
-For trial users specifically: if FinWise guides them directly to a recommended cash-flow action based on their own data, then more users will reach the candidate Aha moment because the experience removes unnecessary decisions and setup before delivering personalized value.
-
-### What changes
-
-- The financial goal is pre-filled from the content that generated the trial instead of being collected through a multi-question quiz.
-- Sign-up is reduced to one authentication action with no credit card requirement.
-- Only one primary business account is required before generating the first forecast.
-- Additional accounts, team invitations, product tours, settings, and upgrade prompts are postponed until after the Aha moment.
-- The first product result answers the financial question that originally brought the visitor to FinWise.
-
-### Why it should convert
-
-The experience preserves intent from acquisition through activation. Each screen has one job and one primary action, while pre-filled context reduces cognitive load and the single-account connection reduces setup effort. The user sees useful content before being asked to sign up and reaches an actionable result before being asked to explore the broader product or upgrade.
-
-FinWise should test the new flow against the current onboarding experience. The primary activation metric should be the percentage of trial users who complete `personalized_cashflow_action_reviewed`. Trial-to-paid conversion and week-one retention should be downstream metrics, with onboarding abandonment, bank-connection failure, and time-to-Aha as guardrails.
-
-_____
+| Prototype view | Role in the onboarding strategy |
+| --- | --- |
+| Population | New reverse-trial users who connect a primary account and reach the candidate Aha event. |
+| Control | Existing post-Aha trial experience, without the contextual paid-plan continuation prompt at this moment. |
+| Treatment | The four-screen path above, including Screen 4 immediately after `personalized_cashflow_action_reviewed`. |
+| Primary metric | Trial-to-paid conversion rate. |
+| Success threshold | Improve trial-to-paid conversion from 1.99% to at least 2.4%. |
+| Activation diagnostic | Share of new trials completing `personalized_cashflow_action_reviewed`. |
+| Guardrails | Bank-connection failure rate, onboarding abandonment, time to Aha, and data-import / modeling completion. |
+| **“Let’s get your cash flow clear.”** | Step 1: confirms the cash-flow goal. The prototype shows it pre-filled from a cash-flow guide, preserving acquisition intent. |
+| **“Connect your primary business account.”** | Step 2: explains that one account is sufficient, then captures the minimum data required for the forecast. The disconnected and connected-account views are states of the same step. |
+| **“Here’s your first cash-flow forecast.”** | Step 3: shows a 30-day forecast, flags the projected buffer shortfall, and offers one recommended action: review invoices due this week. |
+| **“Keep your cash flow working for you.”** | Post-Aha treatment: reinforces the value the user just saw and provides the contextual paid-plan continuation prompt. |
