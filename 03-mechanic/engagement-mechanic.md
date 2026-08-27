@@ -7,68 +7,7 @@
 **Cash Plan Freshness** is a weekly status mechanism that makes the user’s forecast freshness visible. After a user has reviewed a personalized cash-flow action, FinWise marks their 30-day cash plan as **Current**. When a material change affects the forecast—for example, a projected cash-buffer breach, a material invoice change, or a meaningful change in upcoming outgoings—the status becomes **Needs review** and shows one recommended action. Reviewing that action restores the Current status for the week.
 
 Cash Plan Freshness mockup
-
-<img width="1200" height="800" alt="cash-plan-freshness" src="https://github.com/user-attachments/assets/ca017352-db1a-4a7d-8017-0772f114335f" />
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-  <title id="title">FinWise Cash Plan Freshness mechanic mockup</title>
-  <desc id="desc">A FinWise screen showing a cash plan that needs a review after a material forecast change, with one recommended action to review invoices.</desc>
-  <style>
-    .bg { fill: #f5f7fb; }
-    .surface { fill: #fff; stroke: #dce4ef; stroke-width: 1; }
-    .soft { fill: #f3f6fa; }
-    .ink { fill: #14213d; font-family: Arial, Helvetica, sans-serif; }
-    .muted { fill: #64748b; font-family: Arial, Helvetica, sans-serif; }
-    .navy { fill: #163361; }
-    .white { fill: #fff; font-family: Arial, Helvetica, sans-serif; }
-    .alert-surface { fill: #fff8e6; stroke: #d19024; stroke-width: 1; }
-    .alert { fill: #9a5b00; font-family: Arial, Helvetica, sans-serif; }
-    .line { stroke: #dce4ef; stroke-width: 1; }
-  </style>
-  <rect class="bg" width="1200" height="800"/>
-  <rect class="surface" x="0" y="0" width="1200" height="78"/>
-  <rect class="navy" x="72" y="23" rx="9" width="32" height="32"/>
-  <text class="white" x="88" y="45" text-anchor="middle" font-size="18">▦</text>
-  <text class="ink" x="116" y="46" font-size="22" font-weight="700">FinWise</text>
-  <text class="muted" x="1080" y="46" font-size="16" text-anchor="end">Cash plan</text>
-
-  <text class="ink" x="160" y="156" font-size="37" font-weight="700">Your cash plan needs a review.</text>
-  <text class="muted" x="160" y="190" font-size="19">A meaningful change affects your 30-day forecast. Review one action to keep your plan current.</text>
-
-  <rect class="alert-surface" x="160" y="226" rx="14" width="880" height="92"/>
-  <circle fill="#d19024" cx="197" cy="272" r="18"/>
-  <text class="white" x="197" y="279" text-anchor="middle" font-size="19" font-weight="700">!</text>
-  <text class="alert" x="232" y="264" font-size="17" font-weight="700">Plan updated since your last review</text>
-  <text class="muted" x="232" y="290" font-size="15">A cash-buffer risk is now projected in 18 days.</text>
-
-  <rect class="surface" x="160" y="342" rx="14" width="580" height="272"/>
-  <text class="muted" x="188" y="378" font-size="13" font-weight="700">30-DAY CASH PLAN</text>
-  <text class="ink" x="188" y="414" font-size="27" font-weight="700">$9,400 projected low</text>
-  <text class="muted" x="188" y="440" font-size="15">Day 18 · preferred buffer $15,000</text>
-  <line x1="190" y1="537" x2="712" y2="537" stroke="#d19024" stroke-width="2" stroke-dasharray="6 6"/>
-  <text class="alert" x="710" y="529" text-anchor="end" font-size="13">Buffer $15k</text>
-  <polyline fill="none" stroke="#163361" stroke-width="4" points="190,472 250,482 315,495 380,515 440,542 510,582 557,562 622,518 712,467"/>
-  <circle fill="#d19024" cx="510" cy="582" r="7"/>
-  <text class="muted" x="190" y="590" font-size="12">Today</text>
-  <text class="muted" x="448" y="590" font-size="12">+15 days</text>
-  <text class="muted" x="712" y="590" text-anchor="end" font-size="12">+30 days</text>
-
-  <rect class="surface" x="760" y="342" rx="14" width="280" height="272"/>
-  <text class="muted" x="788" y="378" font-size="13" font-weight="700">WHAT CHANGED</text>
-  <text class="ink" x="788" y="430" font-size="34" font-weight="700">$5,240</text>
-  <text class="muted" x="788" y="462" font-size="15">in invoices due this week</text>
-  <text class="muted" x="788" y="486" font-size="15">are now at risk of</text>
-  <text class="muted" x="788" y="510" font-size="15">being delayed.</text>
-
-  <rect class="surface" x="160" y="638" rx="14" width="880" height="118" stroke="#163361" stroke-width="1.5"/>
-  <rect class="soft" x="188" y="665" rx="8" width="42" height="42"/>
-  <text class="navy" x="209" y="693" text-anchor="middle" font-size="22">↗</text>
-  <text class="muted" x="246" y="674" font-size="12" font-weight="700">ONE ACTION TO REVIEW</text>
-  <text class="ink" x="246" y="702" font-size="20" font-weight="700">Review invoices due this week</text>
-  <text class="muted" x="246" y="728" font-size="15">Reviewing these invoices can help keep your balance above buffer through the month.</text>
-  <rect class="navy" x="784" y="674" rx="9" width="228" height="54"/>
-  <text class="white" x="898" y="707" text-anchor="middle" font-size="16" font-weight="700">Review action</text>
-</svg>
-
+<img width="647" height="427" alt="image" src="https://github.com/user-attachments/assets/9f82eb06-c883-4ea8-998b-78e6e7490684" />
 
 ### What the user sees and when
 
