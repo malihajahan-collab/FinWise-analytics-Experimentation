@@ -1,57 +1,78 @@
 # The Bet · FinWise
 
-> Module 1 · Ignite a PLG Motion. The growth hypothesis and where you're betting, plus the growth-loop visualization.
+> Module 1 · Ignite a PLG Motion
 
 ## Growth hypothesis
 
-*The core belief: if we do X, then Y, because Z.*
+### Hypothesis
 
-Based on the data, I believe FinWise's biggest growth problem is converting website visitors into trial users because only 6.79% of visitors start a trial—representing a 93.21% drop-off—and the visit-to-trial conversion rate varies substantially by month. The highest-leverage experiment I would run first is a content-driven landing-page test that pairs high-intent financial guidance with a clear, contextually relevant trial call to action.
+> **If** FinWise shows trial users who have imported their data and completed a financial-modeling action a clear in-product paid-plan continuation prompt, **then** trial-to-paid conversion will increase from **1.99% to 2.4%** over the two-week trial period, **because** users who have completed key product actions may have experienced enough product value for a contextual paid-plan prompt to influence their decision to convert.
 
-If FinWise pairs useful, high-intent financial content with a relevant trial call to action, then the visit-to-trial conversion rate will increase because visitors will understand FinWise's value in the context of the financial task they are already trying to complete.
+### Evidence behind the hypothesis
 
-_____
+- Across the 13 months of funnel data, **6,424 trials** produced **128 paid conversions**: a **1.99% trial-to-paid conversion rate**.
+- Trial-to-paid conversion was between **1.87% and 2.08%** in every month of the dataset.
+- Trial-to-paid is the smallest stage conversion rate in the measured funnel: **6.79%** of website visits become trials, compared with **1.99%** of trials becoming paid customers.
+
+### Measurement plan
+
+| Item | Definition |
+| --- | --- |
+| Method | Randomized A/B test: existing trial experience vs. contextual paid-plan continuation prompt after both key actions are complete. |
+| Duration | Two weeks, covering the standard reverse-trial window. |
+| Primary metric | Trial-to-paid conversion rate. |
+| Success threshold | Increase from 1.99% to at least 2.4%. |
+| Guardrail | Data-import and financial-modeling completion do not decline by more than 5% relative to control. |
+
+---
 
 ## The bet
 
-*Where you focus, and what you're deliberately NOT doing.*
+### Where FinWise will focus
 
-FinWise will focus first on improving the transition from website visit to trial start through a content-driven acquisition loop. The initial bet is to create or select one high-intent financial resource, connect it to a closely matched product use case, and test its landing page and trial call to action against the current experience.
+FinWise will first test the **Revenue** stage: the transition from trial to paid. The bet is that a contextual paid-plan continuation prompt, shown only after a trial user has completed meaningful product actions, will increase the share of trial users who become paid customers.
 
-FinWise is deliberately not increasing paid-acquisition spend, building a multi-step onboarding flow, or launching referral and collaboration loops at this stage. Those options depend on assumptions that the available data does not yet validate, while the largest measurable drop-off currently occurs before the trial begins.
+### Why this bet comes first
 
-_____
+1. It targets the stage closest to FinWise’s business outcome: paid customers.
+2. A one-percentage-point improvement in trial-to-paid conversion would add about **64 paid customers** at the observed 6,424-trial volume; a one-point improvement in visit-to-trial conversion would yield about **19 paid customers** if the current trial-to-paid rate remained unchanged.
+3. The 1.99% trial-to-paid rate is low and consistently narrow across the observed months, rather than being driven by one unusual month.
 
-## Growth loop
+### What FinWise will not do first
 
-*A link or image of the loop that compounds (acquisition → activation → retention → revenue → renewed acquisition).*
+- Increase paid-acquisition spend.
+- Make a broad homepage or trial-start redesign the primary experiment.
+- Launch referral or collaboration loops before testing whether the current trial base converts more effectively.
+
+FinWise will continue to monitor visit-to-trial conversion because it represents the largest absolute volume drop, but it is not the first validation bet.
+
+---
+
+## Content-driven growth loop
+
+This is the acquisition loop FinWise will develop first. It complements the Revenue experiment above: useful, searchable templates bring in qualified prospects; the trial experience then creates the opportunity to convert them to paid customers.
 
 ```mermaid
 flowchart LR
-    A["Trigger<br/>A small-business owner searches for help with a financial task"]
-    B["1 · Discover<br/>Find a FinWise article, template, or calculator"]
-    C["2 · Activate<br/>Start a trial and complete a key financial task"]
-    D["3 · Retain<br/>Return for recurring financial workflows"]
-    E["4 · Convert<br/>Upgrade to a paid plan after experiencing sustained value"]
-    F["5 · Generate signals<br/>Search, usage, and support data reveal new topics"]
-    G["Outcome<br/>FinWise publishes more relevant, targeted content"]
+    A["Trigger<br/>Small-business owner searches for a financial task template"]
+    B["Stage 1 · Discover<br/>Find a public FinWise template or guide"]
+    C["Stage 2 · Apply<br/>Start a trial, import data, and use the template"]
+    D["Stage 3 · Convert<br/>Retain paid access to the completed workflow"]
+    E["Stage 4 · Contribute<br/>Save a data-free reusable template"]
+    F["Outcome<br/>FinWise reviews and publishes the template"]
 
-    A --> B --> C --> D --> E --> F --> G
-    G -->|"Attracts more qualified visitors and restarts the loop"| A
+    A --> B --> C --> D --> E --> F --> A
 ```
 
-**Trigger**: A small-business owner searches for help with a financial-management task and discovers a FinWise article, template, or calculator.
+### Descriptive steps
 
-**Stage 1 — Discover**: The visitor uses the content to understand the task and sees how FinWise can help apply the guidance to their business.
+1. **Trigger — Financial task need:** A small-business owner searches for help with a specific task, such as cash-flow forecasting or budgeting.
+2. **Discover:** They find a public FinWise template or guide that addresses that task.
+3. **Apply:** They start a reverse trial, import their business data, and use the template to complete a financial workflow.
+4. **Convert:** After experiencing the completed workflow, they retain paid access to FinWise.
+5. **Contribute:** A user saves a reusable, data-free template rather than sharing sensitive financial reports.
+6. **Outcome — New discoverable content:** FinWise reviews and publishes high-quality templates, giving the next small-business owner a resource to find and restarting the loop.
 
-**Stage 2 — Activate**: The visitor starts a trial, enters or imports business data, and completes a key financial-management action.
+### Friction removed
 
-**Stage 3 — Retain**: The user returns to FinWise for recurring financial workflows and experiences sustained value.
-
-**Stage 4 — Convert**: The retained user upgrades to a paid plan.
-
-**Stage 5 — Generate signals**: Aggregated search, product-usage, and support data reveal additional high-interest topics that FinWise can address through useful, searchable content.
-
-**Outcome**: FinWise publishes more relevant content, attracting additional qualified small-business visitors and restarting the loop with a larger audience.
-
-_____
+The loop does **not** rely on customers publicly sharing financial reports, which may contain sensitive information and may not be discoverable. It uses reusable templates with no customer financial data as the content asset that can safely be published and found by future prospects.
